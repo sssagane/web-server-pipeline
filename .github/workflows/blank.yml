@@ -24,8 +24,8 @@ jobs:
       # Runs a single command using the runner's shell
       - uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ vars.HOSTNAME }}
-          username: ${{ vars.USERNAME }}
+          host: ${{ secrets.HOSTNAME }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
 
       # Runs a set of commands using the runner's shell
